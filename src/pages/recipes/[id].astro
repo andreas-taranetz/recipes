@@ -98,16 +98,16 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 			content: "←";
 			font-weight: bold;
 			position: absolute;
-			left: 1em;
-			opacity: 0;
+			left: 0.5em;
+			opacity: 0.7;
 			transition: all var(--animation-speed) var(--animation-easing);
 		}
 		&:hover	{
 			::before {
-				left: 0;
-					opacity: 1;
-				}
+				left: -1em;
+				opacity: 1;
 			}
+		}
 	}
 
 	.ingredients, .steps, h2, section {
