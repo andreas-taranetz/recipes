@@ -11,7 +11,7 @@ ingredients:
   - 2 EL	Leinsamenschrot
   - 1 EL	Tomatenmark
   - ½ TL	Gewürze (Salz, Pfeffer, Paprikapulver)
-  - 40g	Kichererbsenmehl (je nach konsistenz variieren)
+  - 40 g	Kichererbsenmehl
   - Brösel
 
 steps:
@@ -20,5 +20,5 @@ steps:
   - Mit dem Pürierstab zerkleinern
   - Im Kühlschrank rasten lassen.
   - Kleine Kugeln formen und in Bröseln wälzen
-  - In einer Pfanne mit ausreichend Öl herausbraten
+  - In einer Pfanne oder auf einem Backblech ohne Backpapier mit ausreichend Öl braten
 ---
