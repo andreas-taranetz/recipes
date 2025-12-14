@@ -1,5 +1,7 @@
 ---
 title: Süßer Germteig
+image: germteig.jpg
+imageAlt: Krampusse (oder so ähnlich) aus süßem Germteig
 
 ingredients:
   - 250 g lauwarme Milch
