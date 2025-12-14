@@ -19,3 +19,6 @@ steps:
   - Die Semmelbrösel in einer Pfanne ohne Öl unter Rühren goldbraun anrösten.
   - Die Knödel aus dem Wasser holen und in den Bröseln wälzen.
 ---
+
+Die Knödel im Bild entsprechen der doppelten Menge.
+Sie wurden in einer Mohn-Brösel-Mischung gewälzt.
