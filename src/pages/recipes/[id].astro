@@ -24,6 +24,9 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		<a href="/">
 			<h1 transition:name={`recipe-title-${Astro.params.id}`}>{title}</h1>
 		</a>
+		<button id="voice-control-button" class="voice-control-button" aria-label="Sprachsteuerung aktivieren" title="Sprachsteuerung">
+			🎤
+		</button>
 		<h2 id="ingredients-heading">Zutaten</h2>
 		<ul class="ingredients" aria-labelledby="ingredients-heading">
 			{
@@ -187,6 +190,44 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 			height: auto;
 		}
 	}
+
+	.voice-control-button {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		border: 2px solid var(--color-text);
+		background-color: var(--color-background);
+		font-size: 1.5rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all var(--animation-speed) var(--animation-easing);
+		z-index: 1000;
+		box-shadow: 0 2px 8px var(--color-shadow);
+	}
+
+	.voice-control-button:hover {
+		transform: scale(1.1);
+		background-color: var(--color-highlight-soft);
+	}
+
+	.voice-control-button.listening {
+		background-color: var(--color-highlight);
+		animation: pulse 1.5s infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			box-shadow: 0 2px 8px var(--color-shadow);
+		}
+		50% {
+			box-shadow: 0 2px 16px var(--color-highlight);
+		}
+	}
 </style>
 
 <script>
@@ -213,5 +254,39 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		} catch (err) {
 			console.error("Wake Lock request failed:", err);
 		}
+	}
+
+	// Voice control lazy loading
+	let voiceControl: any = null;
+	let voiceControlLoaded = false;
+
+	const voiceButton = document.getElementById("voice-control-button");
+	if (voiceButton) {
+		voiceButton.addEventListener("click", async () => {
+			// Lazy load the voice control module
+			if (!voiceControlLoaded) {
+				try {
+					const module = await import("../../scripts/voice-control.js");
+					voiceControl = new module.VoiceControl();
+					voiceControlLoaded = true;
+				} catch (error) {
+					console.error("Failed to load voice control:", error);
+					alert("Sprachsteuerung konnte nicht geladen werden.");
+					return;
+				}
+			}
+
+			// Toggle voice control
+			const isListening = voiceControl.toggle();
+			
+			// Update button appearance
+			if (isListening) {
+				voiceButton.classList.add("listening");
+				voiceButton.setAttribute("aria-label", "Sprachsteuerung deaktivieren");
+			} else {
+				voiceButton.classList.remove("listening");
+				voiceButton.setAttribute("aria-label", "Sprachsteuerung aktivieren");
+			}
+		});
 	}
 </script>
