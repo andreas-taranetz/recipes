@@ -22,5 +22,5 @@ steps:
   - Mit einem kleinem Schöpflöffel Teig in die Pfanne geben und goldbraun anbraten
 ---
 
-Die Pfanne muss nur für die ersten Pancakes beölt werden.
-Danach sollte das Öl im Teig ausreichen damit sich die Pancakes von der Pfanne lösen.
+Die Pfanne muss nur für die ersten Pfannkuchen beölt werden.
+Danach sollte das Öl im Teig ausreichen damit sich die Pfannkuchen von der Pfanne lösen.
