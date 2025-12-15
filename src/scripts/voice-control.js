@@ -103,8 +103,11 @@ export class VoiceControl {
 				.split(/\s+/)
 				.filter((word) => word.length > 2); // Keep words longer than 2 chars
 
-			// Check if any significant word from ingredient appears in transcript
-			const matchFound = ingredientWords.some((word) => transcript.includes(word));
+			// Check if any significant word from ingredient appears in transcript using word boundaries
+			const matchFound = ingredientWords.some((word) => {
+				const regex = new RegExp("\\b" + word + "\\b", "i");
+				return regex.test(transcript);
+			});
 
 			if (matchFound && !ingredient.checkbox.checked) {
 				console.log("Checking off ingredient:", ingredient.text);
@@ -158,7 +161,7 @@ export class VoiceControl {
 	start() {
 		if (!this.recognition) {
 			if (!this.init()) {
-				alert("Spracherkennung wird von Ihrem Browser nicht unterstützt.");
+				this.showNotification("Spracherkennung wird von Ihrem Browser nicht unterstützt.");
 				return false;
 			}
 		}
@@ -198,5 +201,35 @@ export class VoiceControl {
 		} else {
 			return this.start();
 		}
+	}
+
+	/**
+	 * Show a temporary notification to the user
+	 */
+	showNotification(message) {
+		const notification = document.createElement("div");
+		notification.textContent = message;
+		notification.style.cssText = `
+			position: fixed;
+			top: 5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: var(--color-background);
+			color: var(--color-text);
+			padding: 1rem 1.5rem;
+			border-radius: var(--border-radius);
+			box-shadow: 0 4px 12px var(--color-shadow);
+			z-index: 2000;
+			max-width: 90%;
+			text-align: center;
+		`;
+		document.body.appendChild(notification);
+
+		// Remove after 3 seconds
+		setTimeout(() => {
+			notification.style.opacity = "0";
+			notification.style.transition = "opacity 0.3s ease";
+			setTimeout(() => notification.remove(), 300);
+		}, 3000);
 	}
 }

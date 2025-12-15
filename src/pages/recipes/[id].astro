@@ -271,7 +271,29 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 					voiceControlLoaded = true;
 				} catch (error) {
 					console.error("Failed to load voice control:", error);
-					alert("Sprachsteuerung konnte nicht geladen werden.");
+					// Show error notification
+					const notification = document.createElement("div");
+					notification.textContent = "Sprachsteuerung konnte nicht geladen werden.";
+					notification.style.cssText = `
+						position: fixed;
+						top: 5rem;
+						left: 50%;
+						transform: translateX(-50%);
+						background-color: var(--color-background);
+						color: var(--color-text);
+						padding: 1rem 1.5rem;
+						border-radius: var(--border-radius);
+						box-shadow: 0 4px 12px var(--color-shadow);
+						z-index: 2000;
+						max-width: 90%;
+						text-align: center;
+					`;
+					document.body.appendChild(notification);
+					setTimeout(() => {
+						notification.style.opacity = "0";
+						notification.style.transition = "opacity 0.3s ease";
+						setTimeout(() => notification.remove(), 300);
+					}, 3000);
 					return;
 				}
 			}
