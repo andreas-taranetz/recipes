@@ -1,7 +1,7 @@
 ---
-title: Pancakes
-image: ./pancakes.jpg
-imageAlt: A stack of pancakes with a dab of apple sauce on top
+title: Pfannkuchen
+image: ./pfannkuchen.jpg
+imageAlt: Ein Stapel Pfannkuchen mit einem Klecks Apfelmus
 
 ingredients:
   - 1 Banane
