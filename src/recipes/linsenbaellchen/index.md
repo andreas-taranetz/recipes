@@ -1,6 +1,6 @@
 ---
 title: Linsenbällchen
-image: ./linsenbaelchen.jpg
+image: ./linsenbaellchen.jpg
 imageAlt: Ein Teller voll mit Linsenbällchen. In einem davon steckt ein Fonduespieß
 
 ingredients:
