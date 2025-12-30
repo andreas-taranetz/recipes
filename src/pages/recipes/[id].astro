@@ -102,7 +102,7 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 			opacity: 0;
 			transition: all var(--animation-speed) var(--animation-easing);
 		}
-		&:hover	{
+		&:hover, &:focus {
 			::before {
 				left: 0;
 				opacity: 1;
