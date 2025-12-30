@@ -113,64 +113,46 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 	.ingredients, .steps, h2, section {
 		padding: 0 0.4em;
 		margin: 0;
-
+		
 		li {
-			margin-block: 0.2em ;
+			margin-block: 0.2em;
+			list-style: none;
 			border-radius: var(--border-radius);
 			transition: background var(--animation-speed) var(--animation-easing);
 			background-color: var(--color-background);
-		}
-	}
-
-	li {
-		list-style: none;
-
-		&:has(input:checked) {
-			background: var(--color-highlight);
-		}
-	}
-
-	.ingredients {
-		list-style: none;
-		
-		li {
-			display: flex;
-			label {
-				padding: 0.4em;
-				padding-inline-start: 0;
-				flex-grow: 1;
+			
+			&:has(input:checked) {
+				background: var(--color-highlight);
 			}
 		}
 
+		label {
+			display: block;
+			padding: 0.4em;
+			cursor: pointer;
+		}
+		
 		input {
-			margin: 0.4em;
-			accent-color: var(--color-highlight-soft);
+			display: none;
 		}
 	}
 
 	.steps {
-		list-style: none;
 		counter-reset: step;
 
 		li {
 			counter-increment: step;
 		}
-		input {
-			position: absolute;
-			opacity: 0;
-			pointer-events: none;
-		}
 		label {
 			display: block;
 			cursor: pointer;
-			padding: 0.4em;
 		}
 		label::before {
 			content: counter(step) ". ";
 			font-weight: 600;
 		}
 		li:has(~ li input:checked) {
-			background: var(--color-highlight-soft);
+			background: var(--color-background);
 		}
 	}
 
