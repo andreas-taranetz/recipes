@@ -46,8 +46,8 @@ const description = Astro.props.description || "Meine persönliche Sammlung von 
 			--color-text: whitesmoke;
 			--color-background: #1a1a1a;
 			--color-page-background: black;
-			--color-highlight: brown;
-			--color-highlight-soft: maroon;
+			--color-highlight: hsl(270 40 40);
+			--color-highlight-soft: hsl(from var(--color-highlight) h 30 30);
 			--color-shadow: rgba(0, 0, 0, 0.4);
 		}
 	}

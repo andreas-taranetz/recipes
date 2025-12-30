@@ -22,7 +22,7 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 <BaseLayout title={title} description={`Rezept für ${title}`}>
 	<main>
 		<a href="/">
-			<h1 transition:name={`recipe-title-${Astro.params.id}`}>{title}</h1>
+			<h1>{title}</h1>
 		</a>
 		<h2 id="ingredients-heading">Zutaten</h2>
 		<ul class="ingredients" aria-labelledby="ingredients-heading">
@@ -89,25 +89,23 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 	}
 
 	main > a:has(h1) {
-	position: relative;
-	cursor: pointer;
-	text-decoration: none;
-	color: var(--color-text);
+		position: relative;
+		cursor: pointer;
+		text-decoration: none;
+		color: var(--color-text);
 
 		::before {
 			content: "←";
 			font-weight: bold;
 			position: absolute;
-			left: 0.4em;
-			opacity: 0.6;
-			scale: 0.8;
+			left: 1em;
+			opacity: 0;
 			transition: all var(--animation-speed) var(--animation-easing);
 		}
-
 		&:hover	{
 			::before {
+				left: 0;
 				opacity: 1;
-				scale: 1
 			}
 		}
 	}
@@ -124,6 +122,14 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		}
 	}
 
+	li {
+		list-style: none;
+
+		&:has(input:checked) {
+			background: var(--color-highlight);
+		}
+	}
+
 	.ingredients {
 		list-style: none;
 		
@@ -134,13 +140,6 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 				padding-inline-start: 0;
 				flex-grow: 1;
 			}
-			background: linear-gradient(to right, var(--color-highlight) 50%, var(--color-background) 50%);
-			background-size: 201% 100%;
-			background-position: right;
-			transition: background-position var(--animation-speed) var(--animation-easing);
-		}
-		li:has(input:checked) {
-			background-position: left;
 		}
 
 		input {
@@ -172,9 +171,6 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		}
 		li:has(~ li input:checked) {
 			background: var(--color-highlight-soft);
-		}
-		li:has(input:checked) {
-			background: var(--color-highlight);
 		}
 	}
 

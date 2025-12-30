@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const recipes = await getCollection("recipes")
-recipes.sort((a,b) => a.data.title.localeCompare(b.data.title, "de"));
+const recipes = await getCollection("recipes");
+recipes.sort((a, b) => a.data.title.localeCompare(b.data.title, "de"));
 ---
 
 <BaseLayout>
@@ -76,11 +76,17 @@ recipes.sort((a,b) => a.data.title.localeCompare(b.data.title, "de"));
 			box-shadow var(--animation-speed) var(--animation-easing);
 		width: 100%;
 		min-height: 250px;
-	}
 
-	a:hover {
-		scale: 1.05;
-		box-shadow: 0 4px 12px var(--color-shadow);
+		&:hover,
+		&:focus {
+			scale: 1.05;
+			box-shadow: 0 4px 12px var(--color-shadow);
+		}
+		&:focus {
+			outline-style: solid;
+			outline-width: 4px;
+			outline-color: var(--color-highlight);
+		}
 	}
 
 	picture {
