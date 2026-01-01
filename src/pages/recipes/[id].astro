@@ -68,10 +68,6 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		margin-inline: auto;
 	}
 
-	main > h2 {
-		margin-block-start: 0.2em;
-	}
-
 	.step-reset {
 		position: absolute;
 		opacity: 0;
@@ -110,7 +106,12 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		}
 	}
 
-	.ingredients, .steps, h2, section {
+	h2 {
+		padding: 0 0.4em;
+		margin: 0;
+	}
+
+	.ingredients, .steps {
 		padding: 0 0.4em;
 		margin: 0;
 		
