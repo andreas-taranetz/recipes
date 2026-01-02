@@ -27,3 +27,5 @@ steps:
 Ist die Konsistenz zu flüssig, sollte noch etwas angerührte Speisestärke dazugegeben werden.
 
 Erscheint das Fondue zu dickflüssig, sollte es mit etwas Apfelsaft verdünnt werden.
+
+Neben Brotwürfeln eignen sich auch [Linsenbällchen](/recipes/linsenbaellchen) hervoragend für das Käsefondue.

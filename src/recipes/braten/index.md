@@ -32,4 +32,4 @@ steps:
   - Bei 180°C 30 Minuten backen
 ---
 
-Dieser Braten braucht natürlich auch eine passende [Soße](./bratensosse).
+Dieser Braten braucht natürlich auch eine passende [Soße](/recipes/bratensosse).

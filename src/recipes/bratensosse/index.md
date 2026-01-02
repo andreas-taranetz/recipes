@@ -33,4 +33,4 @@ steps:
   - Den zweiten Topf wieder auf den Herd stellen und die Bratensoße weiterköcheln lassen, bis sie die gewünschte Konsistenz hat
 ---
 
-Das abgesiebte Gemüse eignet sich zusammen mit frischen Erdäpfeln perfekt als Beilage für den [Braten](./braten).
+Das abgesiebte Gemüse eignet sich zusammen mit frischen Erdäpfeln perfekt als Beilage für den [Braten](/recipes/braten).
