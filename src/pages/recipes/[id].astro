@@ -46,6 +46,8 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 				))}
 		</ol>
 		{recipe?.rendered?.html && <section set:html={recipe?.rendered?.html} />}
+	</main>
+	<aside>
 		{image && <Picture 
 								width=500 
 								src={image}
@@ -53,19 +55,22 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 								formats={["webp", "jpg"]}
 								transition:name={`recipe-image-${Astro.params.id}`}
 							 />}
-		
-	</main>
+	</aside>
 </BaseLayout>
 
 <style>
-	main {
+	:root {
+		max-width: 500px;
+		margin-inline: auto;
+	}
+
+  main {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 0.2em;
 
-		max-width: 500px;
-		margin-inline: auto;
+		padding-inline: 0.4em;
 	}
 
 	.step-reset {
@@ -107,12 +112,12 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 	}
 
 	h2 {
-		padding: 0 0.4em;
+		padding: 0;
 		margin: 0;
 	}
 
 	.ingredients, .steps {
-		padding: 0 0.4em;
+		padding: 0;
 		margin: 0;
 		
 		li {
@@ -157,7 +162,7 @@ const stepGroupName = `recipe-step-${Astro.params.id}`;
 		}
 	}
 
-	main>picture {
+	aside>picture {
 		display: block;
 		
 		img {

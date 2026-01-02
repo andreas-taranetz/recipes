@@ -32,3 +32,5 @@ steps:
   - Die Bratensoße durch ein feines Sieb in einen zweiten Topf gießen und dabei das Gemüse mit Hilfe des Siebs herausfiltern
   - Den zweiten Topf wieder auf den Herd stellen und die Bratensoße weiterköcheln lassen, bis sie die gewünschte Konsistenz hat
 ---
+
+Das abgesiebte Gemüse eignet sich zusammen mit frischen Erdäpfeln perfekt als Beilage für den [Braten](./braten).

@@ -19,7 +19,7 @@ ingredients:
   - 2 EL Tomatenmark
   - 1 EL Senf
   - 2 EL Sojasauce
-  - 1 TL Paprikapulver
+  - 1 TL Paprikapulve
   - Salz & Pfeffer
 
 steps:
@@ -31,3 +31,5 @@ steps:
   - Eine 25cm Kastenform einfetten und die Linsenbraten-Mischung hineingeben und glattstreichen
   - Bei 180°C 30 Minuten backen
 ---
+
+Dieser Braten braucht natürlich auch eine passende [Soße](./bratensosse).
