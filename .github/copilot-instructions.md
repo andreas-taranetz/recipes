@@ -1,11 +1,11 @@
 # Copilot Instructions
 
-This project is a recipe website built with Astro and managed with pnpm.
+This project is a recipe website built with Astro and managed with bun.
 
 ## Technology Stack
 
 - **Framework**: Astro (v5+)
-- **Package Manager**: pnpm
+- **Package Manager**: bun
 - **Styling**: CSS
 - **Formatting**: Prettier with Astro plugin
 
@@ -32,7 +32,7 @@ This project is a recipe website built with Astro and managed with pnpm.
 
 ## Commands
 
-- `pnpm install` - Install dependencies
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm preview` - Preview production build
+- `bun install` - Install dependencies
+- `bun dev` - Start development server
+- `bun build` - Build for production
+- `bun preview` - Preview production build
