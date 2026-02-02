@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { colorFromString } from "../utils/colorFromString";
+
 const recipes = await getCollection("recipes");
 recipes.sort((a, b) => a.data.title.localeCompare(b.data.title, "de"));
 ---
@@ -13,7 +15,7 @@ recipes.sort((a, b) => a.data.title.localeCompare(b.data.title, "de"));
 			{
 				recipes.map((recipe) => (
 					<li>
-						<a href={`./recipes/${recipe.id}`} data-astro-prefetch>
+						<a href={`./recipes/${recipe.id}`} data-astro-prefetch data-bg-color={colorFromString(recipe.data.title)}>
 							{recipe.data?.image && (
 								<Picture
 									src={recipe.data.image}
@@ -84,6 +86,11 @@ recipes.sort((a, b) => a.data.title.localeCompare(b.data.title, "de"));
 			scale: 1.02;
 			transform: translateY(-4px);
 			box-shadow: 0 4px 12px var(--color-shadow);
+		}
+
+		&:not(:has(picture)) {
+			content: "test";
+			background-color: attr(data-bg-color type(<color>), none);
 		}
 	}
 

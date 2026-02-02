@@ -14,9 +14,11 @@ export const getStaticPaths = (async () => {
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Picture } from "astro:assets";
+import { colorFromString } from "../../utils/colorFromString";
 const recipe = await getEntry("recipes", Astro.params.id);
 const { title, image, imageAlt, ingredients, steps } = Astro.props;
 const stepGroupName = `recipe-step-${Astro.params.id}`;
+const bgColor = image ? undefined : colorFromString(title);
 ---
 
 <BaseLayout title={title} description={`Rezept für ${title}`}>
