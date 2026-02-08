@@ -9,6 +9,7 @@ ingredients:
   - 1 Prise Salz
   - 1 Prise Galgant
   - 1 Prise Grillgewürz (Rub Me Tender)
+  - 3 Zehen Knoblauch
   - Bratöl
 steps:
   - Tofu grob reiben
