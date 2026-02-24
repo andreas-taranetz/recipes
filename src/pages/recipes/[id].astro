@@ -26,13 +26,20 @@ const bgColor = image ? undefined : colorFromString(title);
 		<a href="/">
 			<h1>{title}</h1>
 		</a>
-		<h2 id="ingredients-heading">Zutaten</h2>
+		<div class="ingredients-header">
+			<h2 id="ingredients-heading">Zutaten</h2>
+			<div class="ingredient-scale-controls" aria-label="Zutatenmenge anpassen">
+				<button type="button" id="scale-half" aria-label="Zutaten halbieren" aria-pressed="false">1/2x</button>
+				<button type="button" id="scale-reset" aria-label="Originalmengen verwenden" aria-pressed="true">1x</button>
+				<button type="button" id="scale-double" aria-label="Zutaten verdoppeln" aria-pressed="false">2x</button>
+			</div>
+		</div>
 		<ul class="ingredients" aria-labelledby="ingredients-heading">
 			{
 				ingredients.map((ingredient, index) => (
 					<li>
 						<input type="checkbox" id={"i" + index} title={ingredient + " hinzugefügt"} />
-						<label for={"i" + index}>{ingredient}</label>
+						<label for={"i" + index}><span class="ingredient-text">{ingredient}</span></label>
 					</li>
 				))
 			}
@@ -118,6 +125,32 @@ const bgColor = image ? undefined : colorFromString(title);
 		margin: 0;
 	}
 
+	.ingredients-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+	}
+
+	.ingredient-scale-controls {
+		display: flex;
+		gap: 0.4rem;
+
+		button {
+			border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
+			border-radius: var(--border-radius);
+			background: var(--color-background);
+			color: var(--color-text);
+			padding: 0.2rem 0.5rem;
+			cursor: pointer;
+			font: inherit;
+		}
+
+		button[aria-pressed="true"] {
+			background: var(--color-highlight);
+		}
+	}
+
 	.ingredients, .steps {
 		padding: 0;
 		margin: 0;
@@ -188,6 +221,121 @@ const bgColor = image ? undefined : colorFromString(title);
 				await requestWakeLock();
 			}
 		});
+	}
+
+	const ingredientTextElements = Array.from(document.querySelectorAll<HTMLSpanElement>(".ingredient-text"));
+	const originalIngredientTexts = ingredientTextElements.map((element) => element.textContent ?? "");
+	const halfButton = document.querySelector<HTMLButtonElement>("#scale-half");
+	const doubleButton = document.querySelector<HTMLButtonElement>("#scale-double");
+	const resetButton = document.querySelector<HTMLButtonElement>("#scale-reset");
+	let currentScaleFactor = 1;
+	const singleCharFractions: Record<string, number> = {
+		"¼": 1 / 4,
+		"½": 1 / 2,
+		"¾": 3 / 4,
+		"⅐": 1 / 7,
+		"⅑": 1 / 9,
+		"⅒": 1 / 10,
+		"⅓": 1 / 3,
+		"⅔": 2 / 3,
+		"⅕": 1 / 5,
+		"⅖": 2 / 5,
+		"⅗": 3 / 5,
+		"⅘": 4 / 5,
+		"⅙": 1 / 6,
+		"⅚": 5 / 6,
+		"⅛": 1 / 8,
+		"⅜": 3 / 8,
+		"⅝": 5 / 8,
+		"⅞": 7 / 8,
+	};
+	const singleCharFractionPattern = new RegExp(`[${Object.keys(singleCharFractions).join("")}]`);
+	const quantityPattern = new RegExp(
+		`^((?:\\d+(?:[.,]\\d+)?)?${singleCharFractionPattern.source}|\\d+(?:[.,]\\d+)?)(.*)$`,
+	);
+
+	if (ingredientTextElements.length && halfButton && doubleButton && resetButton) {
+		halfButton.addEventListener("click", () => setIngredientScale(0.5));
+		doubleButton.addEventListener("click", () => setIngredientScale(2));
+		resetButton.addEventListener("click", resetIngredientScale);
+		updateScaleButtonState();
+	}
+
+	function setIngredientScale(scaleFactor: number) {
+		currentScaleFactor = scaleFactor;
+		ingredientTextElements.forEach((ingredientTextElement, index) => {
+			const scaledText = scaleIngredientLine(originalIngredientTexts[index], currentScaleFactor);
+			if (scaledText !== null) {
+				ingredientTextElement.textContent = scaledText;
+			} else {
+				ingredientTextElement.textContent = originalIngredientTexts[index];
+			}
+		});
+		updateScaleButtonState();
+	}
+
+	function resetIngredientScale() {
+		currentScaleFactor = 1;
+		ingredientTextElements.forEach((ingredientTextElement, index) => {
+			ingredientTextElement.textContent = originalIngredientTexts[index];
+		});
+		updateScaleButtonState();
+	}
+
+	function updateScaleButtonState() {
+		halfButton?.setAttribute("aria-pressed", String(currentScaleFactor === 0.5));
+		resetButton?.setAttribute("aria-pressed", String(currentScaleFactor === 1));
+		doubleButton?.setAttribute("aria-pressed", String(currentScaleFactor === 2));
+	}
+
+	function scaleIngredientLine(line: string, factor: number): string | null {
+		const match = line.match(quantityPattern);
+		if (!match) {
+			return null;
+		}
+
+		const quantity = parseQuantity(match[1]);
+		if (quantity === null) {
+			return null;
+		}
+
+		return `${formatQuantity(quantity * factor)}${match[2]}`;
+	}
+
+	function parseQuantity(rawQuantity: string): number | null {
+		const normalized = rawQuantity.replace(",", ".").replace(/\s+/g, "");
+		const fractionCharacter = normalized.match(singleCharFractionPattern)?.[0];
+		if (fractionCharacter) {
+			const fractionValue = singleCharFractions[fractionCharacter];
+			const wholePartRaw = normalized.replace(fractionCharacter, "");
+			const wholePart = wholePartRaw ? Number(wholePartRaw) : 0;
+			if (!Number.isFinite(wholePart)) {
+				return null;
+			}
+			return wholePart + fractionValue;
+		}
+
+		const quantity = Number(normalized);
+		return Number.isFinite(quantity) ? quantity : null;
+	}
+
+	function formatQuantity(value: number): string {
+		if (Number.isInteger(value)) {
+			return String(value);
+		}
+
+		const wholePart = Math.trunc(value);
+		const fractionalPart = Number((value - wholePart).toFixed(3));
+		const fractionCharacter =
+			fractionalPart === 0.5 ? "½"
+			: fractionalPart === 0.25 ? "¼"
+			: fractionalPart === 0.125 ? "⅛"
+			: null;
+		if (fractionCharacter) {
+			return wholePart > 0 ? `${wholePart}${fractionCharacter}` : fractionCharacter;
+		}
+
+		return String(Number(value.toFixed(2)));
 	}
 
 	async function requestWakeLock() {

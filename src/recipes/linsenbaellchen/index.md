@@ -4,14 +4,14 @@ image: ./linsenbaellchen.jpg
 imageAlt: Ein Teller voll mit Linsenbällchen. In einem davon steckt ein Fonduespieß
 
 ingredients:
-  - 150 g 	getrocknete Linsen
-  - 350 ml	Gemüsesuppe
-  - 1	Zwiebel
-  - 2-3	Knoblauchzehen
-  - 2 EL	Leinsamenschrot
-  - 1 EL	Tomatenmark
-  - ½ TL	Gewürze (Salz, Pfeffer, Paprikapulver)
-  - 40 g	Kichererbsenmehl
+  - 150 g getrocknete Linsen
+  - 350 ml Gemüsesuppe
+  - 1 Zwiebel
+  - 2 Knoblauchzehen
+  - 2 EL Leinsamenschrot
+  - 1 EL Tomatenmark
+  - ½ TL Gewürze (Salz, Pfeffer, Paprikapulver)
+  - 40 g Kichererbsenmehl
   - Brösel
 
 steps:

@@ -5,14 +5,14 @@ imageAlt: Ein Rhabarber Muffin aus dem ein Viertel herausgeschnitten wurde damit
 
 ingredients:
   - 4 Stangen	Rhabarber
-  - 150 g	Zucker (oder noch weniger)
-  - 120 g	Butter
-  - 100 ml	Milch
-  - 1 Prise	Vanillepulver
+  - 150 g Zucker (oder noch weniger)
+  - 120 g Butter
+  - 100 ml Milch
+  - 1 Prise Vanillepulver
   - 4	Eier
-  - 30-50 g	Joghurt
-  - 300 g 	Vollkornmehl
-  - ½ Pkg.	Backpulver (8 g)
+  - 40 g Joghurt
+  - 300 g Vollkornmehl
+  - 8 g Backpulver
 
 steps:
   - Rhabarber waschen, schälen und in kleine Stücke schneiden

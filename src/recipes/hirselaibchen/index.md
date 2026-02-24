@@ -6,8 +6,8 @@ imageAlt: Vier goldgelbe Hirselaibche in einer kleinen blauben Pfanne.
 ingredients:
   - 1 Zwiebel
   - 1 Knoblauchzehe
-  - 1/4 l Hirse
-  - 1/2 l Gemüsesuppe
+  - ¼ l Hirse
+  - ½ l Gemüsesuppe
   - 100 g Käse
   - 20 g Brösel
   - Salz und Pfeffer

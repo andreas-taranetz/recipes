@@ -4,11 +4,11 @@ image: gruenkern-kaese-laibchen.jpg
 imageAlt: Nahaufnahme eines Laibchens auf einem weißen Teller, dahinter liegt eine Kartoffel, etwas Soße und ein zweites Laibchen
 
 ingredients:
-  - 1/8 l Gemüsesuppe
+  - 125 ml Gemüsesuppe
   - 100 g Grünkernschrot
   - 45 g Lauch (Porree)
   - 40 g Zwiebel
-  - 45 g Paprik
+  - 45 g Paprika
   - 100 g Karotten
   - 150 g Sellerie
   - 45 g Lauch (Porree)
