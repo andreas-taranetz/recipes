@@ -4,7 +4,7 @@ image: gruenkern-kaese-laibchen.jpg
 imageAlt: Nahaufnahme eines Laibchens auf einem weißen Teller, dahinter liegt eine Kartoffel, etwas Soße und ein zweites Laibchen
 
 ingredients:
-  - 1/8 l Gemüsebrühe
+  - 1/8 l Gemüsesuppe
   - 100 g Grünkernschrot
   - 45 g Lauch (Porree)
   - 40 g Zwiebel
@@ -17,7 +17,7 @@ ingredients:
   - 1 Ei
 
 steps:
-  - Gemüsebrühe aufkochen
+  - Gemüsesuppe aufkochen
   - Grünkernschrot einstreuen und ca. 5 Minuten quellen lassen
   - Lauch in streien schenden, Zwiebel fein würfeln, das restliche Gemüse und den Käse reiben
   - Alle Zutaten vermegen und zu Laibchen formen

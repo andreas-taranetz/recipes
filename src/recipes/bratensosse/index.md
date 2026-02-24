@@ -15,7 +15,7 @@ ingredients:
   - 2 EL	Mehl
   - 2 EL	Topfomatenmark
   - 50 ml	Rotwein / oder Saft
-  - 750 ml	Gemüsebrühe
+  - 750 ml	Gemüsesuppe
   - 1 TL	Senf (oder Mayonaise)
   - 1 EL	Sojasoße
   - 1 EL	Zuckerrübensirup (oder Agavendicksaft, oder Honig)
@@ -26,7 +26,7 @@ steps:
   - Pflanzenöl in einer Pfanne bei mittlerer Hitze erwärmen und das Gemüse darin ca. 8-10 Minuten anbraten, bis es leicht geröstet ist
   - Mit Salz, Pfeffer und einer Prise Zucker würzen
   - Mehl und Tomatenmark hinzugeben, vermengen und weitere 1-2 Minuten anrösten
-  - Mit Rotwein oder Saft ablöschen und mit der Gemüsebrühe aufgießen
+  - Mit Rotwein oder Saft ablöschen und mit der Gemüsesuppe aufgießen
   - Senf, Sojasoße und Zuckerrübensirup einrühren und Rosmarin zur Soße geben
   - Alles zusammen ca. 5-10 Minuten köcheln lassen
   - Die Bratensoße durch ein feines Sieb in einen zweiten Topf gießen und dabei das Gemüse mit Hilfe des Siebs herausfiltern
