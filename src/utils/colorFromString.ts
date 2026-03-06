@@ -14,8 +14,8 @@ export function colorFromString(str: string): string {
 	const hue = Math.abs(hashValue) % 360;
 
 	// Use pleasant saturation and lightness values
-	const saturation = 65;
-	const lightness = 55;
+	const saturation = 70;
+	const lightness = 30;
 
 	return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
