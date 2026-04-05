@@ -11,7 +11,6 @@ ingredients:
   - 45 g Paprika
   - 100 g Karotten
   - 150 g Sellerie
-  - 45 g Lauch (Porree)
   - 80 g Käse
   - Salz und Pfeffer
   - 1 Ei
@@ -19,7 +18,7 @@ ingredients:
 steps:
   - Gemüsesuppe aufkochen
   - Grünkernschrot einstreuen und ca. 5 Minuten quellen lassen
-  - Lauch in streien schenden, Zwiebel fein würfeln, das restliche Gemüse und den Käse reiben
+  - Lauch in Streifen schneiden, Zwiebel fein würfeln, das restliche Gemüse und den Käse reiben
   - Alle Zutaten vermegen und zu Laibchen formen
   - Im Backrohr bei 180 Grad ca. 15 Minuten backen
 ---
