@@ -5,15 +5,15 @@ imageAlt: Eine Glasschüssel voll mit goldbraunem Tofuhack
 ingredients:
   - 1 kg Tofu
   - Sojasoße (nach Belieben)
-  - Passata (nach Belieben)
-  - 1 Prise Salz
-  - 1 Prise Galgant
-  - 1 Prise Grillgewürz (Rub Me Tender)
+  - 1 Flasche passierte Tomaten ~700g
+  - 2 TL Salz
+  - 1 EL Galgant
+  - 1 EL Grillgewürz (Rub Me Tender)
   - 3 Zehen Knoblauch
   - Bratöl
 steps:
   - Tofu grob reiben
-  - Sojasoße, Salz, Passata und Gewürze hinzugeben
+  - Sojasoße, Salz, passierte Tomaten und Gewürze hinzugeben
   - Gut durchmischen und kurz einziehen lassen
   - Mit Öl benetzen
   - Auf beölte Bleche aufteilen

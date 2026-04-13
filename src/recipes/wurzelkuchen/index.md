@@ -8,20 +8,20 @@ ingredients:
   - 200 g Karotten
   - 1 Orange (davon die Schale)
   - 2 EL Orangensaft
+  - 5 Eier
   - 150 g Vollrohrzucker
-  - 50 g Haselnüsse
   - 100 g Mehl
   - 1 EL Backpulver
-  - 5 Eier
   - 200 g Mandeln
+  - 50 g Haselnüsse
 
 steps:
   - Topinambur und Karotten waschen, schälen und fein raspeln
   - Orange heiß abwaschen, Schale abreiben und Saft auspressen
-  - Haselnüsse grob hacken
-  - Mandeln fein mahlen
   - Eier trennen, Eiweiß steif schlagen
   - Eigelb mit Zucker schaumig schlagen
+  - Mandeln fein mahlen
+  - Haselnüsse grob hacken
   - Zum Eigelb alle trockenen Zutaten, geriebene Schale und Saft der Orange und die geraspelten Wurzeln unterheben
   - Zum Schluss den Eischnee unterheben
   - Teig bei 180 Grad 30-40 Minuten backen
