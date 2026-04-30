@@ -112,7 +112,15 @@ const bgColor = image ? undefined : colorFromString(title);
 			opacity: 0;
 			transition: all var(--animation-speed) var(--animation-easing);
 		}
+
 		&:hover, &:focus {
+			::before {
+				left: 0;
+				opacity: 1;
+			}
+		}
+
+		@media (min-width: 640px) {
 			::before {
 				left: 0;
 				opacity: 1;
