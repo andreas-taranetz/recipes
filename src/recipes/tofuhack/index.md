@@ -7,8 +7,8 @@ ingredients:
   - Sojasauce (nach Belieben)
   - 1 Flasche passierte Tomaten ~700g
   - 2 TL Salz
-  - 1 EL Galgant
-  - 1 EL Grillgewürz (Rub Me Tender)
+  - 1 EL gemahlener Galgant
+  - 1 EL Grillgewürz (Rub Me Tender von Sonnentor)
   - 3 Zehen Knoblauch
   - Bratöl
 steps:
@@ -16,7 +16,6 @@ steps:
   - Sojasauce, Salz, passierte Tomaten und Gewürze hinzugeben
   - Gut durchmischen und kurz einziehen lassen
   - Mit Öl benetzen
-  - Auf beölte Bleche aufteilen
-  - Bei 180°C (Umluft) bis zur gewünschten Bräune braten lassen
-  - In immer kürzer werdenden Abständen durchmischen
+  - Auf 2-3 beölte Bleche aufteilen
+  - Bei 180°C (Umluft) braten lassen, dabei immer wieder durchmischen bis das Hack trocken ist
 ---
