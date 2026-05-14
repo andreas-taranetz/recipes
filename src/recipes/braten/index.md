@@ -32,4 +32,4 @@ steps:
   - Bei 180°C 30 Minuten backen
 ---
 
-Dazu gehört: [Bratensoße](/recipes/bratensosse)
+Dazu gehört: [Bratensauce](/recipes/bratensosse)

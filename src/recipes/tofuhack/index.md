@@ -4,7 +4,7 @@ image: ./tofu.jpg
 imageAlt: Eine Glasschüssel voll mit goldbraunem Tofuhack
 ingredients:
   - 1 kg Tofu
-  - Sojasoße (nach Belieben)
+  - Sojasauce (nach Belieben)
   - 1 Flasche passierte Tomaten ~700g
   - 2 TL Salz
   - 1 EL Galgant
@@ -13,7 +13,7 @@ ingredients:
   - Bratöl
 steps:
   - Tofu grob reiben
-  - Sojasoße, Salz, passierte Tomaten und Gewürze hinzugeben
+  - Sojasauce, Salz, passierte Tomaten und Gewürze hinzugeben
   - Gut durchmischen und kurz einziehen lassen
   - Mit Öl benetzen
   - Auf beölte Bleche aufteilen

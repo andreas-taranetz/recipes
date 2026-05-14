@@ -1,7 +1,7 @@
 ---
-title: Bratensoße
+title: Bratensauce
 image: bratensosse.jpg
-imageAlt: Ein Metalltopf aus dem Bratensoße gelöffelt wird
+imageAlt: Ein Metalltopf aus dem Bratensauce gelöffelt wird
 
 ingredients:
   - 1	rote Zwiebel
@@ -17,7 +17,7 @@ ingredients:
   - 50 ml	Rotwein / oder Saft
   - 750 ml	Gemüsesuppe
   - 1 TL	Senf (oder Mayonaise)
-  - 1 EL	Sojasoße
+  - 1 EL	Sojasauce
   - 1 EL	Zuckerrübensirup (oder Agavendicksaft, oder Honig)
   - 1 TL	Rosmarin
 
@@ -27,10 +27,10 @@ steps:
   - Mit Salz, Pfeffer und einer Prise Zucker würzen
   - Mehl und Tomatenmark hinzugeben, vermengen und weitere 1-2 Minuten anrösten
   - Mit Rotwein oder Saft ablöschen und mit der Gemüsesuppe aufgießen
-  - Senf, Sojasoße und Zuckerrübensirup einrühren und Rosmarin zur Soße geben
+  - Senf, Sojasauce und Zuckerrübensirup einrühren und Rosmarin zur Soße geben
   - Alles zusammen ca. 5-10 Minuten köcheln lassen
-  - Die Bratensoße durch ein feines Sieb in einen zweiten Topf gießen und dabei das Gemüse mit Hilfe des Siebs herausfiltern
-  - Den zweiten Topf wieder auf den Herd stellen und die Bratensoße weiterköcheln lassen, bis sie die gewünschte Konsistenz hat
+  - Die Bratensauce durch ein feines Sieb in einen zweiten Topf gießen und dabei das Gemüse mit Hilfe des Siebs herausfiltern
+  - Den zweiten Topf wieder auf den Herd stellen und die Bratensauce weiterköcheln lassen, bis sie die gewünschte Konsistenz hat
 ---
 
 Das abgesiebte Gemüse eignet sich zusammen mit frischen Erdäpfeln perfekt als Beilage für den [Braten](/recipes/braten).
