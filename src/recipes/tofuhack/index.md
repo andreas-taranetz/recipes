@@ -17,5 +17,5 @@ steps:
   - Gut durchmischen und kurz einziehen lassen
   - Mit Öl benetzen
   - Auf 2-3 beölte Bleche aufteilen
-  - Bei 180°C (Umluft) braten lassen, dabei immer wieder durchmischen bis das Hack trocken ist
+  - Bei 180°C (Umluft) braten lassen, dabei immer wieder durchmischen bis das Hack knusprig ist
 ---
