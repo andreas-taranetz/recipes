@@ -1,5 +1,5 @@
 ---
-title: Germteig Striezel
+title: Germteig-Striezel
 image: germteig-striezel.jpg
 imageAlt: Ein geflochtener goldgelber Striezel frisch aus dem Backrohr
 
@@ -9,9 +9,9 @@ ingredients:
   - 1300 g Weizenmehl
   - 42 g frische Germ (1 Würfel)
   - 14 g Salz
-  - 150 g Zucker
+  - 120 g Zucker
   - 50 g zimmerwarme Butter
-  - 1 Ei zum bestreichen
+  - 1 Ei zum Bestreichen
 
 steps:
   - Milch mit Eiern verrühren
