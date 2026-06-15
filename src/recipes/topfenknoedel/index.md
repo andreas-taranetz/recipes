@@ -6,7 +6,6 @@ imageAlt: Ein Teller voll Topfenknödel mit Mohn-Brösel aus der doppelten Menge
 ingredients:
   - 250 g	Topfen
   - 1	Ei
-  - 2 EL	Butter (weich, in Stücken)
   - 70 g	Grieß (Hartweizengrieß)
   - 2 EL	Semmelbrösel
   - 1 Prise Salz, für das Wasser
