@@ -1,5 +1,7 @@
 ---
 title: Kaiserschmarrn
+image: ./kaiserschmarrn.jpg
+imageAlt: Eine Portion Kaiserschmarrn mit gekochten Apfelstücken in einer blauen Schüssel auf einem Holztisch
 
 ingredients:
   - 4	Eier
