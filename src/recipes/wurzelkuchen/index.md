@@ -10,10 +10,10 @@ ingredients:
   - 2 EL Orangensaft
   - 5 Eier
   - 150 g Vollrohrzucker
-  - 100 g Mehl
-  - 1 EL Backpulver
   - 200 g Mandeln
   - 50 g Haselnüsse
+  - 100 g Mehl
+  - 1 EL Backpulver
 
 steps:
   - Topinambur und Karotten waschen, schälen und fein raspeln
