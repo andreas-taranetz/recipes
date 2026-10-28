@@ -9,7 +9,7 @@ ingredients:
   - 1 Orange (davon die Schale)
   - 2 EL Orangensaft
   - 5 Eier
-  - 150 g Vollrohrzucker
+  - 100 g Vollrohrzucker
   - 200 g Mandeln
   - 50 g Haselnüsse
   - 100 g Mehl
